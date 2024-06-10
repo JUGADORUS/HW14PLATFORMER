@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimationController : MonoBehaviour
@@ -7,6 +5,8 @@ public class AnimationController : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private GameObject _playerVisual;
     [SerializeField] private Rigidbody2D _rigidbody;
+
+    private float _runSpeed = 2f;
 
     private void FixedUpdate()
     {
@@ -25,7 +25,7 @@ public class AnimationController : MonoBehaviour
             _playerVisual.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
-        if (_rigidbody.velocity.x > 2f || _rigidbody.velocity.x < -2f)
+        if (_rigidbody.velocity.x > _runSpeed || _rigidbody.velocity.x < -_runSpeed)
         {
             _animator.SetBool("isRunning", true);
         }

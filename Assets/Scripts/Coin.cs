@@ -1,20 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
-using System;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<Wallet>(out Wallet wallet))
-        {
-            wallet.TakeCoin();
-            StartCoroutine(Disappear());
-        }
-    }
-
-    private IEnumerator Disappear()
+    public IEnumerator Disappear()
     {
         float minTransparentValue = 0;
         float disappearingSpeed = 3f;
