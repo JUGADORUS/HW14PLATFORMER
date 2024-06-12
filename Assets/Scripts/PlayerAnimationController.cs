@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
+public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform _playerVisual;
     [SerializeField] private Rigidbody2D _rigidbody;
 
     private const string IsRunning = "IsRunning";
+
     private float _runSpeed = 2f;
 
     private void FixedUpdate()

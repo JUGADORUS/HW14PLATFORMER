@@ -8,6 +8,7 @@ public class Mover : MonoBehaviour
     [SerializeField] private float _jumpForce;
 
     const string HorizontalAxis = "Horizontal";
+
     private bool _isGrounded = false;
     private bool _isJump = false;
 
