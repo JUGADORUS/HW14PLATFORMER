@@ -43,7 +43,11 @@ GameObject:
   - component: {fileID: 4183767611793592081}
   - component: {fileID: 7200136646969279969}
   - component: {fileID: 3566187024725061815}
-  - component: {fileID: -7565984318073518299}
+  - component: {fileID: -3522358490269888016}
+  - component: {fileID: 7578216293174625166}
+  - component: {fileID: 7095350544037564274}
+  - component: {fileID: 3349702408835658469}
+  - component: {fileID: 4196945342521836519}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -153,15 +157,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257d2a90949f4d24c92f7578caf77ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 4183767611793592081}
-  _points: []
-  _eyes: {fileID: 1544781500466083056}
-  _speed: 1.6
   _attackCooldown: 1.5
-  _attackRange: 0.5
-  _animator: {fileID: 2765924200416451697}
-  _attackPoint: {fileID: 3151867004790824714}
---- !u!114 &-7565984318073518299
+  _chasing: {fileID: 7095350544037564274}
+  _attacker: {fileID: 7578216293174625166}
+  _patrolling: {fileID: 4196945342521836519}
+--- !u!114 &-3522358490269888016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,10 +170,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 4831841759824058800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 153f47004ca003b40b2a5155305098c6, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5d3ffdaa76d994482bba8ce816b3d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  MaxHealth: 150
+--- !u!114 &7578216293174625166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831841759824058800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08710584993fc07458f8d6bc7a86b6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackPoint: {fileID: 3151867004790824714}
+  _animator: {fileID: 2765924200416451697}
+  _timeToAttack: 0.5
+  _attackRange: 0.5
+--- !u!114 &7095350544037564274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831841759824058800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87f8c773b61e3a41ac840de2b060f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eyes: {fileID: 1544781500466083056}
+  _mover: {fileID: 3349702408835658469}
+  _attacker: {fileID: 7578216293174625166}
+--- !u!114 &3349702408835658469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831841759824058800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b5152f3cd747445b776c32ae07d073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 4183767611793592081}
+  _speed: 1.6
+--- !u!114 &4196945342521836519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831841759824058800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5686c195c771e4b4e8273454cc2ea892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _points: []
+  _mover: {fileID: 3349702408835658469}
 --- !u!1 &6984483393094220635
 GameObject:
   m_ObjectHideFlags: 0

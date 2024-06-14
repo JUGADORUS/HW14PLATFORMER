@@ -3,7 +3,7 @@ using UnityEngine;
 public class CollectableObjectDetector : MonoBehaviour
 {
     [SerializeField] private Wallet _wallet;
-    [SerializeField] private Player _player;
+    [SerializeField] private Health _playerHealth;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +15,7 @@ public class CollectableObjectDetector : MonoBehaviour
 
         if (collision.TryGetComponent(out Aid aid))
         {
-            _player.Heal();
+            _playerHealth.Heal(aid.treatmentEffect);
             StartCoroutine(aid.Disappear());
         }
     }

@@ -2,15 +2,26 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+    const string HorizontalAxis = "Horizontal";
+
     [SerializeField] private GroundChecker _groundChecker;
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
 
-    const string HorizontalAxis = "Horizontal";
-
     private bool _isGrounded = false;
     private bool _isJump = false;
+
+    private void FixedUpdate()
+    {
+        Move();
+
+        if (_isJump)
+        {
+            Jump();
+            _isJump = false;
+        }
+    }
 
     private void Update()
     {
@@ -19,17 +30,6 @@ public class Mover : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _isJump = true;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        Move();
-
-        if(_isJump)
-        {
-            Jump();
-            _isJump = false;
         }
     }
 

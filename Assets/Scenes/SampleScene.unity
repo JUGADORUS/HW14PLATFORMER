@@ -510,6 +510,18 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1.7654252
       objectReference: {fileID: 0}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1176502103}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1092220120}
     - target: {fileID: 4831841759824058800, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -1105,6 +1117,18 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1.7654252
       objectReference: {fileID: 0}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1280570805}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.data[1]
+      value: 
+      objectReference: {fileID: 737655578}
     - target: {fileID: 4831841759824058800, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -25455,6 +25479,18 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1.7654252
       objectReference: {fileID: 0}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1276763906}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1114525265}
     - target: {fileID: 4831841759824058800, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -25559,6 +25595,7 @@ GameObject:
   - component: {fileID: 1387631045}
   - component: {fileID: 1387631046}
   - component: {fileID: 1387631047}
+  - component: {fileID: 1387631048}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -25712,7 +25749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallet: {fileID: 1387631043}
-  _player: {fileID: 1387631047}
+  _playerHealth: {fileID: 1387631048}
 --- !u!114 &1387631045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25755,7 +25792,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090bec873113dbd4687f896fcf66dc93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 450
+--- !u!114 &1387631048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387631034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5d3ffdaa76d994482bba8ce816b3d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 250
 --- !u!1001 &1437992542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32382,6 +32431,18 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1.7654252
       objectReference: {fileID: 0}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.data[0]
+      value: 
+      objectReference: {fileID: 172419593}
+    - target: {fileID: 4196945342521836519, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
+      propertyPath: _points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1132611183}
     - target: {fileID: 4831841759824058800, guid: b13c4ff0169aaaa4b8e915a4e385f670, type: 3}
       propertyPath: m_Name
       value: Enemy

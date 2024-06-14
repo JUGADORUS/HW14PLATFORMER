@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
+    private const string IsRunning = "IsRunning";
+
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform _playerVisual;
     [SerializeField] private Rigidbody2D _rigidbody;
-
-    private const string IsRunning = "IsRunning";
 
     private float _runSpeed = 2f;
 

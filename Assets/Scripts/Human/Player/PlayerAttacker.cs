@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class AttackController : MonoBehaviour
+public class PlayerAttacker : MonoBehaviour
 {
+    private const string Attacking = "Attacking";
+
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform _attackPoint;
-
-    private const string Attacking = "Attacking";
 
     private float _attackRange = 0.5f;
 
@@ -25,9 +25,9 @@ public class AttackController : MonoBehaviour
         
         foreach(Collider2D hitObject in hitObjects)
         {
-            if(hitObject.TryGetComponent(out Enemy enemy))
+            if(hitObject.TryGetComponent(out Enemy enemy) && hitObject.TryGetComponent(out Health enemyHealth))
             {
-                enemy.TakeDamage(50);
+                enemyHealth.TakeDamage(50);
             }
         }
     }
