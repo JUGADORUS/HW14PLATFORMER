@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
             _chasing.GoToPlayer();
 
-            if(_attacker.GetAttackPossibility() == true && _cooldownTimer >= _attackCooldown)
+            if(_attacker.CanAttack == true && _cooldownTimer >= _attackCooldown)
             {
                 _cooldownTimer = 0;
                 StartCoroutine(_attacker.AttackPlayer());

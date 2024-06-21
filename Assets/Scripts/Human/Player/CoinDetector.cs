@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class CollectableObjectDetector : MonoBehaviour
+public class CoinDetector : MonoBehaviour
 {
     [SerializeField] private Wallet _wallet;
-    [SerializeField] private Health _playerHealth;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,12 +10,6 @@ public class CollectableObjectDetector : MonoBehaviour
         {
             _wallet.TakeCoin();
             StartCoroutine(coin.Disappear());
-        }
-
-        if (collision.TryGetComponent(out Aid aid))
-        {
-            _playerHealth.Heal(aid.treatmentEffect);
-            StartCoroutine(aid.Disappear());
         }
     }
 }

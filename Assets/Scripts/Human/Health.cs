@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] protected int MaxHealth = 100;
+    [SerializeField] protected int MaxHealth;
 
-    protected int CurrentHealth;
+    //protected int CurrentHealth;
+    public int CurrentHealth;
 
     private void Start()
     {
@@ -28,9 +29,9 @@ public class Health : MonoBehaviour
 
     public void Heal(int treatmentEffect)
     {
-        if (CurrentHealth != MaxHealth)
-        {
-            CurrentHealth += treatmentEffect;
-        }
+        int minHealth = 0;
+        CurrentHealth += treatmentEffect;
+        CurrentHealth = Mathf.Clamp(CurrentHealth, minHealth, MaxHealth);
+        Debug.Log(CurrentHealth);
     }
 }

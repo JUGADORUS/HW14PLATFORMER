@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
+    public bool CanAttack { get; private set; }
+
     private const string Attack = "Attack";
 
     [SerializeField] private Transform _attackPoint;
@@ -11,7 +13,6 @@ public class Attacker : MonoBehaviour
     [SerializeField] private float _attackRange = 0.5f;
 
     private WaitForSeconds _waitForSeconds;
-    private bool _canAttack = false;
 
     private void Start()
     {
@@ -34,18 +35,13 @@ public class Attacker : MonoBehaviour
             }
         }
 
-        _canAttack = false;
+        CanAttack = false;
 
         yield return null;
     }
 
     public void SetAttackPossibility(bool isPossible)
     {
-        _canAttack = isPossible;
-    }
-
-    public bool GetAttackPossibility()
-    {
-        return _canAttack;
+        CanAttack = isPossible;
     }
 }
